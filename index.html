@@ -3,331 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anand Kumar - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Anand Kumar - Professional Portfolio</title>
+    
+    <!-- Professional Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="script.js"></script>
-    <div class="container">
-<!-- Header Section -->
-		<div class="header">
-    <div class="header-content">
-        <div class="header-text">
-            <h1>Hey... I'm Anand</h1>
-            <p class="tagline">Diploma Student | Entrepreneur | Data Enthusiast</p>
-           	 <ul class="description">
-	  <li>Currently Persuing Diploma in Electrical Engineering (Industrial Control)</li>
-	  <li>Co-Founder & Ex-CEO of BrightAds (Marketing Agency)</li>
-	  <li>Having strong Leadership Qualities & Eager for Learning</li>
-	  <li>Passionate about studying data</li>
-	  <li>Skilled in Excel, Power BI, AutoCAD EE, and Tally</li>
-	  <li>Use skills for analytics, decision-making, process optimization, and business growth</li>
-	</ul>
-        </div>
-        <div class="header-image">
-            <div class="profile-img">
-                <img src="profile.jpg" alt="Anand Kumar" class="profile-photo">
+    <!-- Animated Background -->
+    <div class="bg-wrapper">
+        <div class="gradient-bg"></div>
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">Anand Kumar</div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#brightads" class="nav-link">BrightAds</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
             </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </div>
-</div>
+    </nav>
 
-<!-- About Section -->
-<div class="section">
-    <h2>About Me</h2>
-    
-    <div class="about-phase">
-        <h3>Early Life & Childhood Dreams</h3>
-        <p>From a very young age, I carried a restless energy — an inner voice that always told me I was meant to do something different. While most kids were satisfied following the usual path, I was drawn toward things that set me apart. Singing was my first passion; it gave me the courage to express myself, to perform, and to believe that I had something unique to offer. Currently I post my Cover Songs on my Instagram Page (being_anand_18). Those early days were not just about hobbies — they were the foundation of my hunger to stand out, to chase passions fearlessly, and to build a life far bigger than ordinary.</p>
-    </div>
+    <div class="main-container">
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="profile-wrapper">
+                        <div class="profile-ring"></div>
+                        <div class="profile-image">
+                            <img src="profile.jpg" alt="Anand Kumar">
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <h1 class="hero-title">Hey... I'm <span class="highlight">Anand</span></h1>
+                    <p class="hero-subtitle">Diploma Student | Entrepreneur | Data Enthusiast</p>
+                    <div class="hero-description">
+                        <div class="hero-point">
+                            <span class="point-icon">✓</span>
+                            <p>Currently Pursuing Diploma in Electrical Engineering (Industrial Control)</p>
+                        </div>
+                        <div class="hero-point">
+                            <span class="point-icon">✓</span>
+                            <p>Co-Founder & Ex-CEO of BrightAds (Marketing Agency)</p>
+                        </div>
+                        <div class="hero-point">
+                            <span class="point-icon">✓</span>
+                            <p>Having strong Leadership Qualities & Eager for Learning</p>
+                        </div>
+                        <div class="hero-point">
+                            <span class="point-icon">✓</span>
+                            <p>Passionate about studying data</p>
+                        </div>
+                        <div class="hero-point">
+                            <span class="point-icon">✓</span>
+                            <p>Skilled in Excel, Power BI, AutoCAD EE, and Tally</p>
+                        </div>
+                        <div class="hero-point">
+                            <span class="point-icon">✓</span>
+                            <p>Use skills for analytics, decision-making, process optimization, and business growth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="about-phase">
-        <h3>Teenage & Fitness Journey</h3>
-        <p>During my teenage years, I discovered a new passion — fitness and bodybuilding. Hitting the gym every day taught me discipline, patience, and the power of consistent effort. It wasn't just about building muscles; it was about building a mindset that refuses to give up. I learned to push my limits, set goals, and lead by example. This phase shaped my leadership qualities and showed me that real success comes only to those who are ready to work harder than anyone else.</p>
-    </div>
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
 
-    <div class="about-phase">
-        <h3>Education Journey</h3>
-        <p>My education journey has been as unique as my ambitions. I started at "St. Mary's School" which is located near my Home town, studying under the ICSE board from Nursery to 8th grade. Later, I moved to Nagaji Saraswati Vidya Mandir for 9th and 10th under the CBSE board. After completing school, I pursued a Diploma in Electrical Engineering with a focus on Industrial Control from Government Polytechnic Gonda (U.P). Each step in my education taught me not just academics, but also perseverance, problem-solving, and the importance of building a strong foundation for my bigger dreams.</p>
-    </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Early Life & Childhood Dreams</h3>
+                        <p>From a very young age, I carried a restless energy — an inner voice that always told me I was meant to do something different. While most kids were satisfied following the usual path, I was drawn toward things that set me apart. Singing was my first passion; it gave me the courage to express myself, to perform, and to believe that I had something unique to offer. Currently I post my Cover Songs on my Instagram Page (being_anand_18). Those early days were not just about hobbies — they were the foundation of my hunger to stand out, to chase passions fearlessly, and to build a life far bigger than ordinary.</p>
+                    </div>
+                </div>
 
-    <div class="about-phase">
-        <h3>My Entrepreneurship Journey</h3>
-        <p>Driven by the dream to build something of my own, I launched my first venture — BrightAds, a marketing agency. During my 2nd Year of my Collage. I invested countless hours learning every aspect of running a business, from strategy to execution. My goal was clear: to make a mark and earn big at a young age. But despite my hard work, securing the necessary funds became a major challenge. That setback didn't stop me; it taught me resilience and grit.</p>
-        <p>To gain real-world experience, I then worked as a Sales Executive at "Club Next", a garments company during my 4th semester. There, I learned the importance of communication, understanding clients, and closing deals. Balancing work and my studies, I continued sharpening my skills, proving that no matter the circumstances, I am ready to hustle, adapt, and grow.</p>
-    </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Teenage & Fitness Journey</h3>
+                        <p>During my teenage years, I discovered a new passion — fitness and bodybuilding. Hitting the gym every day taught me discipline, patience, and the power of consistent effort. It wasn't just about building muscles; it was about building a mindset that refuses to give up. I learned to push my limits, set goals, and lead by example. This phase shaped my leadership qualities and showed me that real success comes only to those who are ready to work harder than anyone else.</p>
+                    </div>
+                </div>
 
-    <div class="about-phase">
-        <h3>Skills & Future Vision</h3>
-        <p>Alongside my studies and work, I have constantly focused on building strong technical skills. I have honed my abilities in Excel, Power BI, AutoCAD Electrical, Basic SQL, and Basic PLC. Learning never stops for me — every skill adds a new tool to my arsenal for achieving bigger goals. My vision is clear: to create success, earn significantly at a young age, and leave a lasting impact in whatever I do. Every challenge is an opportunity, and I am ready to take them head-on, driven by passion, leadership, and relentless determination.</p>
-    </div>
-</div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Education Journey</h3>
+                        <p>My education journey has been as unique as my ambitions. I started at "St. Mary's School" which is located near my Home town, studying under the ICSE board from Nursery to 8th grade. Later, I moved to Nagaji Saraswati Vidya Mandir for 9th and 10th under the CBSE board. After completing school, I pursued a Diploma in Electrical Engineering with a focus on Industrial Control from Government Polytechnic Gonda (U.P). Each step in my education taught me not just academics, but also perseverance, problem-solving, and the importance of building a strong foundation for my bigger dreams.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>My Entrepreneurship Journey</h3>
+                        <p>Driven by the dream to build something of my own, I launched my first venture — BrightAds, a marketing agency. During my 2nd Year of my College. I invested countless hours learning every aspect of running a business, from strategy to execution. My goal was clear: to make a mark and earn big at a young age. But despite my hard work, securing the necessary funds became a major challenge. That setback didn't stop me; it taught me resilience and grit.</p>
+                        <p>To gain real-world experience, I then worked as a Sales Executive at "Club Next", a garments company during my 4th semester. There, I learned the importance of communication, understanding clients, and closing deals. Balancing work and my studies, I continued sharpening my skills, proving that no matter the circumstances, I am ready to hustle, adapt, and grow.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <h3>Skills & Future Vision</h3>
+                        <p>Alongside my studies and work, I have constantly focused on building strong technical skills. I have honed my abilities in Excel, Power BI, AutoCAD Electrical, Basic SQL, and Basic PLC. Learning never stops for me — every skill adds a new tool to my arsenal for achieving bigger goals. My vision is clear: to create success, earn significantly at a young age, and leave a lasting impact in whatever I do. Every challenge is an opportunity, and I am ready to take them head-on, driven by passion, leadership, and relentless determination.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Skills Section -->
-        <div class="section">
-            <h2>Technical Skills</h2>
+        <section id="skills" class="section skills-section">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+
             <div class="skills-grid">
                 <div class="skill-card">
+                    <div class="skill-icon">📊</div>
                     <h3>Excel</h3>
                     <p>Advanced formulas, pivot tables, and data analysis</p>
                 </div>
                 <div class="skill-card">
+                    <div class="skill-icon">📈</div>
                     <h3>Power BI</h3>
                     <p>Interactive dashboards and business intelligence</p>
                 </div>
                 <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
                     <h3>SQL</h3>
                     <p>Database management and complex queries</p>
                 </div>
-               <div class="skill-card">
-    <h3>Electrical AutoCAD</h3>
-    <p>Circuit design, electrical schematics, and technical drawings</p>
-</div>
                 <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <h3>Electrical AutoCAD</h3>
+                    <p>Circuit design, electrical schematics, and technical drawings</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💰</div>
                     <h3>Tally</h3>
                     <p>Accounting and financial management</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-		       <!-- BrightAds Section -->
-<div class="section">
-    <h2>BrightAds - Marketing Agency</h2>
-    
-    <div class="brightads-container">
-        <div class="brightads-header">
-            <div class="brightads-logo">
-                <img src="brightadslogo.jpg" alt="BrightAds Logo" class="logo-img">
+        <!-- BrightAds Section -->
+        <section id="brightads" class="section brightads-section">
+            <div class="section-header">
+                <h2 class="section-title">BrightAds - Marketing Agency</h2>
+                <div class="title-underline"></div>
             </div>
-            <div class="brightads-intro">
-                <h3>BrightAds</h3>
-                <p class="tagline-bright">City Lights-Brand Heights</p>
-                <p>BrightAds provides cutting-edge digital advertisement boards, strategically placed in prime city locations, offering an interactive and visually engaging platform for businesses to showcase their products and services.</p>
-            </div>
-        </div>
 
-        <div class="brightads-features">
-            <div class="feature-card">
-                <h4>🎯 Strategic Locations</h4>
-                <p>Prime high-traffic areas across cities ensuring maximum visibility and customer engagement for your brand.</p>
-            </div>
-            <div class="feature-card">
-                <h4>💡 Dynamic Content</h4>
-                <p>Eye-catching, animated displays with real-time updates capability. Change your ads instantly for special offers or events.</p>
-            </div>
-            <div class="feature-card">
-                <h4>💰 Flexible Pricing</h4>
-                <p>Affordable plans starting from ₹1,680/week to ₹59,590/year with customizable options for businesses of all sizes.</p>
-            </div>
-        </div>
-
-        <div class="brightads-stats">
-            <div class="stat-item">
-                <h4>₹10,000 Cr</h4>
-                <p>Expected Indian Market by 2030</p>
-            </div>
-            <div class="stat-item">
-                <h4>14-16%</h4>
-                <p>Projected CAGR Growth</p>
-            </div>
-            <div class="stat-item">
-                <h4>200+</h4>
-                <p>Target Billboard Network</p>
-            </div>
-        </div>
-
-        <div class="brightads-services">
-            <h4>Our Services</h4>
-            <div class="services-list">
-                <span class="service-tag">Digital Billboard Advertising</span>
-                <span class="service-tag">Election Campaign Ads</span>
-                <span class="service-tag">Brand Visibility Solutions</span>
-                <span class="service-tag">Real-time Content Management</span>
-                <span class="service-tag">Strategic Location Planning</span>
-            </div>
-        </div>
-
-        <div class="brightads-contact">
-            <div class="contact-bright">
-                <h4>Get Started Today</h4>
-                <p>📧 brightads3244@gmail.com</p>
-                <p>📞 +91 6394676408, +91 7380869694</p>
-                <p>📍 Ghazipur, 233001</p>
-                <button class="pitch-deck-btn" id="downloadPitchDeck">View Pitch Deck</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Projects Section -->
-<div class="section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <div class="project-image">
-                <img src="imagesamazon dashboard.png.png" alt="Amazon Sales Dashboard" class="project-img">
-            </div>
-            <h3>Amazon Sales Dashboard</h3>
-            <p>Comprehensive Excel dashboard analyzing Amazon sales data with city-wise, state-wise analytics, revenue tracking, and product performance metrics. Features advanced pivot tables and data visualization.</p>
-            <div class="tech-tags">
-                <span class="tag">Excel</span>
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Pivot Tables</span>
-            </div>
-        </div>
-        
-        <div class="project-card">
-            <div class="project-image">
-                <img src="imagesreliance dashboard.png.png" alt="Reliance Smart Dashboard" class="project-img">
-            </div>
-            <h3>Reliance Smart Business Dashboard</h3>
-            <p>Power BI based comprehensive business intelligence dashboard for Reliance Smart featuring revenue analysis, profit tracking, regional performance, and brand-wise data visualization with interactive reports.</p>
-            <div class="tech-tags">
-                <span class="tag">PowerBI</span>
-                <span class="tag">VBA</span>
-                <span class="tag">Business Intelligence</span>
-            </div>
-        </div>
-        
-        <div class="project-card">
-            <div class="project-image">
-                <img src="imagessubstation.png" alt="Electrical Substation Design" class="project-img">
-            </div>
-            <h3>11kV Electrical Substation Design</h3>
-            <p>Complete electrical substation single line diagram (SLD) for 500kVA transformer distribution system. Includes circuit breakers, protection systems, and earthing design using AutoCAD.</p>
-            <div class="tech-tags">
-                <span class="tag">AutoCAD EE</span>
-                <span class="tag">Electrical Design</span>
-                <span class="tag">Circuit Analysis</span>
-            </div>
-        </div>
-
-        <div class="project-card">
-            <div class="project-image">
-                <img src="pipe type earthing.png" alt="Typical Example of Pipe type Earthing" class="project-img">
-            </div>
-            <h3>Single Line Diagram of Pipe type of Earthing</h3>
-            <p>Complete earthing system layout designed using AutoCAD, showcasing pipe-type earthing electrode installation at 3000mm depth. Features include proper backfill mixture composition, conductor specifications, flattened pipe connections, and maintenance access provisions ensuring reliable electrical safety and equipment protection.</p>
-            <div class="tech-tags">
-                <span class="tag">AutoCAD EE</span>
-                <span class="tag">Electrical Design</span>
-                <span class="tag">Commercial Circuit Diagram</span>
-            </div>
-        </div>
-		
-		<div class="project-card">
-			<div class="project-image">
-				<img src="inventory management dashboard.png" alt="Inventory Management System" class="project-image">
-			</div>
-			<h3>Inventory Management System</h3>
-			<p>End-to-end Inventory Management System designed for retail businesses using Excel. Tracks customer orders, product stock levels, purchase/sales transactions, and generates automated financial reports. Dashboard provides instant insights into top-performing products, customer trends, and inventory worth exceeding ₹15 Lakh with profit tracking capabilities.</p>
-			<div class="tech-tags">
-				<span class="tag">Advanced Excel</span>
-				<span class="tag">Pivot Table</span>
-				<span class="tag">VLOOKUP</span>
-			</div>
-		</div>
-    </div>
-</div>
-
- <!-- Contact Section -->
-<div class="section">
-    <h2>Get In Touch</h2>
-    <div class="contact-info">
-        <div class="contact-card email-card">
-            <h3>📧 Email</h3>
-            <p>anandkrpra3244@gmail.com</p>
-        </div>
-        <div class="contact-card phone-card">
-            <h3>📱 Phone No.</h3>
-            <p>6394676408</p>
-        </div>
-        <div class="contact-card instagram-card">
-            <h3>📷 Instagram</h3>
-            <p>being_anand_18</p>
-        </div>
-        <div class="contact-card linkedin-card">
-            <h3>💼 LinkedIn</h3>
-            <p>anandkumarofficial</p>
-        </div>
-    </div>
-</div>
-
-        
-<!-- Contact Form Section -->
-<div class="section">
-    <h2>Open to Work</h2>
-    <div class="contact-form-container">
-        <div class="contact-info-text">
-            <p style="color: #666; font-size: 1rem; line-height: 1.6;">
-				<ul>
-                Have a project in mind, want to discuss opportunities or do you want me work for you ?
-                Feel free to reach out.
-            </p>
-        </div>
-        
-        <div class="contact-form">
-            <form action="https://formspree.io/f/mgvlgdyk" method="POST" id="contactForm">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Your Name" required>
+            <div class="brightads-content">
+                <div class="brightads-header">
+                    <div class="brightads-logo">
+                        <img src="brightadslogo.jpg" alt="BrightAds Logo">
+                    </div>
+                    <div class="brightads-intro">
+                        <h3>BrightAds</h3>
+                        <p class="brightads-tagline">City Lights - Brand Heights</p>
+                        <p>BrightAds provides cutting-edge digital advertisement boards, strategically placed in prime city locations, offering an interactive and visually engaging platform for businesses to showcase their products and services.</p>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                </div>
-				 <div class="form-group">
-                    <input type="text" name="Subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </div>
-    </div>
-</div>
-       
-<!-- Footer -->
-<div class="footer">
-    <p>© 2025 Build & Owned by Anand Kumar. All Rights Reserved.</p>
-    <p>This portfolio website and all its contains are the intellectual property of Anand Kumar.</p>
-</div>
 
-    <script>
-        // Smooth scrolling and animations
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add animation delays to sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach((section, index) => {
-                section.style.animationDelay = `${index * 0.2}s`;
-            });
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h4>Strategic Locations</h4>
+                        <p>Prime high-traffic areas across cities ensuring maximum visibility and customer engagement for your brand.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h4>Dynamic Content</h4>
+                        <p>Eye-catching, animated displays with real-time updates capability. Change your ads instantly for special offers or events.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h4>Flexible Pricing</h4>
+                        <p>Affordable plans starting from ₹1,680/week to ₹59,590/year with customizable options for businesses of all sizes.</p>
+                    </div>
+                </div>
 
-            // Add hover effects to cards
-            const cards = document.querySelectorAll('.skill-card, .project-card, .contact-card');
-            cards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'scale(1.05) rotateZ(1deg)';
-                });
+                <div class="stats-container">
+                    <div class="stat-card">
+                        <h4>₹10,000 Cr</h4>
+                        <p>Expected Indian Market by 2030</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>14-16%</h4>
+                        <p>Projected CAGR Growth</p>
+                    </div>
+                    <div class="stat-card">
+                        <h4>200+</h4>
+                        <p>Target Billboard Network</p>
+                    </div>
+                </div>
+
+                <div class="services-container">
+                    <h4>Our Services</h4>
+                    <div class="services-tags">
+                        <span class="service-tag">Digital Billboard Advertising</span>
+                        <span class="service-tag">Election Campaign Ads</span>
+                        <span class="service-tag">Brand Visibility Solutions</span>
+                        <span class="service-tag">Real-time Content Management</span>
+                        <span class="service-tag">Strategic Location Planning</span>
+                    </div>
+                </div>
+
+                <div class="brightads-cta">
+                    <h4>Get Started Today</h4>
+                    <p>📧 brightads3244@gmail.com</p>
+                    <p>📞 +91 6394676408, +91 7380869694</p>
+                    <p>📍 Ghazipur, 233001</p>
+                    <button class="cta-button" id="pitchDeckBtn">View Pitch Deck</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagesamazon dashboard.png.png" alt="Amazon Sales Dashboard">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Full Image</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Amazon Sales Dashboard</h3>
+                        <p>Comprehensive Excel dashboard analyzing Amazon sales data with city-wise, state-wise analytics, revenue tracking, and product performance metrics. Features advanced pivot tables and data visualization.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Excel</span>
+                            <span class="tech-tag">Data Analysis</span>
+                            <span class="tech-tag">Pivot Tables</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagesreliance dashboard.png.png" alt="Reliance Smart Dashboard">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Full Image</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Reliance Smart Business Dashboard</h3>
+                        <p>Power BI based comprehensive business intelligence dashboard for Reliance Smart featuring revenue analysis, profit tracking, regional performance, and brand-wise data visualization with interactive reports.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">PowerBI</span>
+                            <span class="tech-tag">VBA</span>
+                            <span class="tech-tag">Business Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="imagessubstation.png" alt="Electrical Substation Design">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Full Image</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>11kV Electrical Substation Design</h3>
+                        <p>Complete electrical substation single line diagram (SLD) for 500kVA transformer distribution system. Includes circuit breakers, protection systems, and earthing design using AutoCAD.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AutoCAD EE</span>
+                            <span class="tech-tag">Electrical Design</span>
+                            <span class="tech-tag">Circuit Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="pipe type earthing.png" alt="Pipe Type Earthing">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Full Image</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Single Line Diagram of Pipe Type Earthing</h3>
+                        <p>Complete earthing system layout designed using AutoCAD, showcasing pipe-type earthing electrode installation at 3000mm depth. Features include proper backfill mixture composition, conductor specifications, flattened pipe connections, and maintenance access provisions ensuring reliable electrical safety and equipment protection.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">AutoCAD EE</span>
+                            <span class="tech-tag">Electrical Design</span>
+                            <span class="tech-tag">Commercial Circuit Diagram</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="inventory management dashboard.png" alt="Inventory Management System">
+                        <div class="project-overlay">
+                            <button class="view-btn">View Full Image</button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Inventory Management System</h3>
+                        <p>End-to-end Inventory Management System designed for retail businesses using Excel. Tracks customer orders, product stock levels, purchase/sales transactions, and generates automated financial reports. Dashboard provides instant insights into top-performing products, customer trends, and inventory worth exceeding ₹15 Lakh with profit tracking capabilities.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Advanced Excel</span>
+                            <span class="tech-tag">Pivot Table</span>
+                            <span class="tech-tag">VLOOKUP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card email-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p>anandkrpra3244@gmail.com</p>
+                </div>
+                <div class="contact-card phone-card">
+                    <div class="contact-icon">📱</div>
+                    <h3>Phone No.</h3>
+                    <p>6394676408</p>
+                </div>
+                <div class="contact-card instagram-card">
+                    <div class="contact-icon">📷</div>
+                    <h3>Instagram</h3>
+                    <p>being_anand_18</p>
+                </div>
+                <div class="contact-card linkedin-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>LinkedIn</h3>
+                    <p>anandkumarofficial</p>
+                </div>
+            </div>
+
+            <div class="contact-form-section">
+                <h3>Open to Work</h3>
+                <p class="form-description">Have a project in mind, want to discuss opportunities or do you want me work for you? Feel free to reach out.</p>
                 
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'scale(1) rotateZ(0deg)';
-                });
-            });
+                <form action="https://formspree.io/f/mgvlgdyk" method="POST" class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
 
-            // Email click functionality
-            const emailCard = document.querySelector('.contact-card');
-            if (emailCard) {
-                emailCard.addEventListener('click', function() {
-                    window.location.href = 'mailto:anandkrpra3244@gmail.com';
-                });
-            }
-        });
-    </script>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2025 Build & Owned by Anand Kumar. All Rights Reserved.</p>
+            <p>This portfolio website and all its contents are the intellectual property of Anand Kumar.</p>
+        </footer>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-
-
 
 
 
