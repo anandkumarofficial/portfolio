@@ -309,28 +309,51 @@ body {
 
 .timeline-item {
     position: relative;
-    margin-bottom: 2.5rem;
-    padding: 2rem;
+    margin-bottom: 1.5rem;
     background: rgba(102, 126, 234, 0.05);
     border-radius: 20px;
     transition: all 0.3s;
+    overflow: hidden;
 }
 
 .timeline-item:hover {
-    transform: translateX(10px);
     box-shadow: var(--shadow-sm);
 }
 
 .timeline-marker {
     position: absolute;
     left: -3.7rem;
-    top: 2rem;
+    top: 1.5rem;
     width: 18px;
     height: 18px;
     background: var(--accent);
     border-radius: 50%;
     border: 4px solid white;
     box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.2);
+    transition: all 0.3s;
+}
+
+.timeline-item.active .timeline-marker {
+    background: var(--green);
+    box-shadow: 0 0 0 4px rgba(39, 174, 96, 0.3);
+}
+
+.timeline-header {
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    user-select: none;
+}
+
+.timeline-header:hover {
+    background: rgba(102, 126, 234, 0.08);
+}
+
+.timeline-item.active .timeline-header {
+    background: rgba(102, 126, 234, 0.1);
 }
 
 .timeline-content h3 {
@@ -338,7 +361,30 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin: 0;
+}
+
+.timeline-icon {
+    font-size: 1.5rem;
+    color: var(--accent);
+    transition: transform 0.3s;
+    font-weight: bold;
+}
+
+.timeline-item.active .timeline-icon {
+    transform: rotate(180deg);
+    color: var(--green);
+}
+
+.timeline-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.timeline-item.active .timeline-body {
+    max-height: 1000px;
+    padding: 0 2rem 2rem 2rem;
 }
 
 .timeline-content p {
@@ -352,38 +398,217 @@ body {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .skill-card {
     background: var(--gradient-primary);
     color: white;
-    padding: 2.5rem 2rem;
+    padding: 1.8rem 1.5rem;
     border-radius: 20px;
-    text-align: center;
+    text-align: left;
     transition: all 0.4s;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     box-shadow: var(--shadow-md);
 }
 
 .skill-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    flex-shrink: 0;
 }
 
 .skill-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    opacity: 0.95;
+    line-height: 1.4;
+}
+
+/* BrightAds */
+.brightads-header {
+    background: linear-gradient(135deg, #ff4757, #ff3838);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2.5rem;
+}
+
+.brightads-logo {
+    width: 150px;
+    height: 150px;
+    background: white;
+    border-radius: 20px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brightads-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.brightads-intro h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.brightads-tagline {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    opacity: 0.95;
+}
+
+.brightads-intro p {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.feature-card {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
 
-.skill-card p {
+.feature-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    padding: 2.5rem;
+    background: var(--gradient-secondary);
+    border-radius: 25px;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    text-align: center;
+    color: white;
+}
+
+.stat-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.services-container h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.services-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.service-tag {
+    background: var(--gradient-accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.brightads-cta {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 25px;
+    text-align: center;
+}
+
+.brightads-cta h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.brightads-cta p {
     font-size: 1rem;
-    opacity: 0.95;
+    margin-bottom: 0.5rem;
+}
+
+.cta-button {
+    background: var(--gradient-accent);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-sm);
 }
 
 /* Projects */
@@ -919,4 +1144,3 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
-
