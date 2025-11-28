@@ -250,37 +250,6 @@ function initProjectImages() {
 }
 
 // ===================================
-// 7. PITCH DECK WITH PIN SECURITY
-// ===================================
-function initPitchDeck() {
-    const pitchDeckBtn = document.getElementById('pitchDeckBtn');
-    
-    if (pitchDeckBtn) {
-        pitchDeckBtn.addEventListener('click', function() {
-            const userPin = prompt('Enter Security PIN to access Pitch Deck:');
-            
-            if (userPin === '7521') {
-                // Correct PIN - Allow download
-                const link = document.createElement('a');
-                link.href = 'Final All files of BrightAds .pdf';
-                link.download = 'BrightAds-Pitch-Deck.pdf';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                
-                alert('✅ Access Granted! Downloading Pitch Deck...');
-            } else if (userPin === null) {
-                // User cancelled
-                return;
-            } else {
-                // Wrong PIN
-                alert('❌ Incorrect PIN. Access denied.\n\nPlease contact Anand Kumar for the correct PIN.');
-            }
-        });
-    }
-}
-
-// ===================================
 // 8. CONTACT FORM SUBMISSION
 // ===================================
 function initContactForm() {
@@ -514,3 +483,4 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 // ===================================
 // END OF SCRIPT
 // ===================================
+
