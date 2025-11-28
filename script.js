@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initParticles();
     initContactCards();
     initProjectImages();
-    initPitchDeck();
     initContactForm();
     initScrollAnimations();
 });
@@ -250,7 +249,7 @@ function initProjectImages() {
 }
 
 // ===================================
-// 8. CONTACT FORM SUBMISSION
+// 7. CONTACT FORM SUBMISSION
 // ===================================
 function initContactForm() {
     const form = document.getElementById('contactForm');
@@ -483,4 +482,3 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 // ===================================
 // END OF SCRIPT
 // ===================================
-
