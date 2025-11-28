@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initNavbarScroll();
     initParticles();
+    initAccordion();
     initContactCards();
     initProjectImages();
     initContactForm();
@@ -158,7 +159,33 @@ function initParticles() {
 }
 
 // ===================================
-// 5. CONTACT CARDS CLICK HANDLERS
+// 5. ACCORDION FOR ABOUT SECTION
+// ===================================
+function initAccordion() {
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    timelineItems.forEach(item => {
+        const header = item.querySelector('.timeline-header');
+        
+        header.addEventListener('click', function() {
+            // Check if this item is already active
+            const isActive = item.classList.contains('active');
+            
+            // Close all other items
+            timelineItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        });
+    });
+}
+
+// ===================================
+// 6. CONTACT CARDS CLICK HANDLERS
 // ===================================
 function initContactCards() {
     // Email Card
