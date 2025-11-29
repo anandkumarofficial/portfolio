@@ -397,43 +397,46 @@ body {
 /* Skills */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.2rem;
+    max-width: 100%;
 }
 
 .skill-card {
     background: var(--gradient-primary);
     color: white;
-    padding: 1.8rem 1.5rem;
-    border-radius: 20px;
-    text-align: left;
-    transition: all 0.4s;
+    padding: 1.5rem 1.2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 1.2rem;
+    justify-content: center;
+    min-height: 160px;
 }
 
 .skill-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-md);
 }
 
 .skill-icon {
-    font-size: 2.5rem;
-    flex-shrink: 0;
+    display: none;
 }
 
 .skill-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
 }
 
 .skill-card p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     opacity: 0.95;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* BrightAds */
