@@ -926,11 +926,11 @@ body {
         grid-template-columns: 1fr;
         gap: 2rem;
         text-align: center;
-        padding: 2.5rem;
+        padding: 2rem;
     }
     
     .hero-title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
     
     .hero-subtitle {
@@ -942,7 +942,7 @@ body {
     }
     
     .section-title {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
     
     .brightads-header {
@@ -970,107 +970,262 @@ body {
 
 /* ============================================
    MOBILE RESPONSIVE - PHONE (480px)
+   EXTRA COMPACT FOR MOBILE
    ============================================ */
 @media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+    
     .main-container {
         padding: 0.5rem;
     }
     
     .nav-brand {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
+    }
+    
+    .nav-container {
+        padding: 0.8rem 1rem;
     }
     
     .section {
-        padding: 2rem 1.5rem;
-        margin: 1.5rem 0;
+        padding: 1.5rem 1rem;
+        margin: 1rem 0;
+        border-radius: 20px;
     }
     
     .hero-section {
-        padding: 4rem 0 2rem;
+        padding: 3.5rem 0 1.5rem;
+        min-height: auto;
     }
     
     .hero-content {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
+        border-radius: 20px;
     }
     
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
     }
     
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-point {
+        padding: 0.8rem;
     }
     
     .hero-point p {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+    }
+    
+    .point-icon {
+        font-size: 1rem;
     }
     
     .profile-wrapper {
-        width: 200px;
-        height: 200px;
+        width: 160px;
+        height: 160px;
+    }
+    
+    .section-header {
+        margin-bottom: 2rem;
     }
     
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .title-underline {
+        width: 60px;
+        height: 3px;
+    }
+    
+    .timeline {
+        padding-left: 1.5rem;
+    }
+    
+    .timeline::before {
+        width: 3px;
+    }
+    
+    .timeline-item {
+        margin-bottom: 1rem;
+    }
+    
+    .timeline-header {
+        padding: 1rem 1.2rem;
     }
     
     .timeline-content h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+    
+    .timeline-icon {
+        font-size: 1.2rem;
+    }
+    
+    .timeline-item.active .timeline-body {
+        padding: 0 1.2rem 1.2rem 1.2rem;
     }
     
     .timeline-content p {
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+        line-height: 1.6;
+    }
+    
+    .timeline-marker {
+        left: -2.3rem;
+        width: 14px;
+        height: 14px;
+        border: 3px solid white;
+        top: 1rem;
     }
     
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
-    .brightads-intro h3 {
-        font-size: 2rem;
+    .skill-card {
+        padding: 1.2rem 1rem;
+        min-height: 130px;
+        border-radius: 12px;
     }
     
-    .brightads-tagline {
-        font-size: 1.1rem;
+    .skill-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
     }
     
-    .features-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-container {
-        grid-template-columns: 1fr;
-        padding: 2rem;
-    }
-    
-    .stat-card h4 {
-        font-size: 2.5rem;
+    .skill-card p {
+        font-size: 0.8rem;
     }
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .project-card {
+        border-radius: 15px;
     }
     
     .project-image {
-        height: 200px;
+        height: 180px;
+    }
+    
+    .project-content {
+        padding: 1.2rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .project-content p {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+    
+    .tech-tags {
+        gap: 0.5rem;
+    }
+    
+    .tech-tag {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
     }
     
     .contact-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .contact-card {
+        padding: 1.3rem 1rem;
+        min-height: 110px;
+        border-radius: 12px;
+    }
+    
+    .contact-card-header {
+        gap: 0.6rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-icon {
+        font-size: 1.6rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .contact-card p {
+        font-size: 0.85rem;
+    }
+    
+    .contact-form-section h3 {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .form-description {
+        font-size: 0.85rem;
+        margin-bottom: 1.5rem;
     }
     
     .form-row {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .contact-form {
-        padding: 2rem 1.5rem;
+        padding: 1.5rem 1rem;
+        border-radius: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+        border-radius: 10px;
+    }
+    
+    .form-group textarea {
+        min-height: 100px;
+    }
+    
+    .submit-btn {
+        padding: 1rem;
+        font-size: 1rem;
+        border-radius: 10px;
+    }
+    
+    .footer {
+        padding: 1.5rem 1rem;
+        margin-top: 2rem;
+        border-radius: 15px;
+    }
+    
+    .footer p {
+        font-size: 0.8rem;
     }
     
     .modal-close {
         top: 15px;
         right: 20px;
-        font-size: 35px;
+        font-size: 30px;
     }
 }
 
@@ -1078,56 +1233,116 @@ body {
    EXTRA SMALL MOBILE (360px)
    ============================================ */
 @media (max-width: 480px) {
+    html {
+        font-size: 13px;
+    }
+    
     .nav-brand {
         font-size: 1.1rem;
     }
     
     .hero-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
     
     .hero-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
     
     .section-title {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
     
     .section {
-        padding: 1.5rem 1rem;
+        padding: 1.2rem 0.8rem;
     }
     
     .profile-wrapper {
-        width: 180px;
-        height: 180px;
+        width: 140px;
+        height: 140px;
     }
     
     .timeline {
-        padding-left: 1.5rem;
+        padding-left: 1.2rem;
     }
     
     .timeline-marker {
-        left: -2.5rem;
-        width: 15px;
-        height: 15px;
+        left: -2rem;
+        width: 12px;
+        height: 12px;
+        border: 2px solid white;
     }
     
-    .brightads-logo {
-        width: 120px;
-        height: 120px;
+    .timeline-header {
+        padding: 0.8rem 1rem;
     }
     
-    .brightads-intro h3 {
-        font-size: 1.7rem;
+    .timeline-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .timeline-item.active .timeline-body {
+        padding: 0 1rem 1rem 1rem;
+    }
+    
+    .timeline-content p {
+        font-size: 0.8rem;
+    }
+    
+    .skill-card {
+        padding: 1rem 0.8rem;
+        min-height: 110px;
+    }
+    
+    .skill-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .skill-card p {
+        font-size: 0.75rem;
+    }
+    
+    .project-image {
+        height: 150px;
     }
     
     .project-content {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-content p {
+        font-size: 0.8rem;
+    }
+    
+    .contact-card {
+        padding: 1.1rem 0.8rem;
+        min-height: 100px;
+    }
+    
+    .contact-icon {
+        font-size: 1.4rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .contact-card p {
+        font-size: 0.8rem;
     }
     
     .contact-form {
-        padding: 1.5rem 1rem;
+        padding: 1.2rem 0.8rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+        font-size: 0.85rem;
     }
 }
 
