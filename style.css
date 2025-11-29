@@ -716,7 +716,7 @@ body {
 /* Contact */
 .contact-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
     margin-bottom: 3rem;
 }
@@ -724,39 +724,37 @@ body {
 .contact-card {
     background: var(--gradient-primary);
     color: white;
-    padding: 2rem 1.5rem;
-    border-radius: 20px;
-    text-align: center;
+    padding: 1.8rem 2rem;
+    border-radius: 15px;
+    text-align: left;
     cursor: pointer;
     transition: all 0.3s;
-    min-height: 180px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 1.2rem;
 }
 
 .contact-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-5px);
     box-shadow: var(--shadow-md);
 }
 
 .contact-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    flex-shrink: 0;
 }
 
 .contact-card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.3rem;
 }
 
 .contact-card p {
-    font-size: 1rem;
-    font-weight: 600;
-    word-break: break-word;
+    font-size: 0.95rem;
+    font-weight: 500;
+    opacity: 0.95;
 }
 
 .contact-form-section h3 {
