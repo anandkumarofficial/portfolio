@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initNavbarScroll();
     initParticles();
     initAccordion();
+    initDownloadResume();
     initContactCards();
     initProjectImages();
     initContactForm();
@@ -185,7 +186,39 @@ function initAccordion() {
 }
 
 // ===================================
-// 6. CONTACT CARDS CLICK HANDLERS
+// 6. DOWNLOAD RESUME BUTTON
+// ===================================
+function initDownloadResume() {
+    const downloadBtn = document.getElementById('downloadResumeBtn');
+    
+    if (downloadBtn) {
+        downloadBtn.addEventListener('click', function() {
+            // Create download link
+            const link = document.createElement('a');
+            link.href = 'Anand Kumar Resume.pdf'; // Your PDF file path
+            link.download = 'Anand Kumar Resume.pdf';
+            
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Visual feedback
+            const originalText = this.innerHTML;
+            this.innerHTML = '<span class="btn-icon">✓</span> Downloaded!';
+            this.style.background = 'linear-gradient(135deg, #27ae60, #2ecc71)';
+            
+            // Reset after 2 seconds
+            setTimeout(() => {
+                this.innerHTML = originalText;
+                this.style.background = '';
+            }, 2000);
+        });
+    }
+}
+
+// ===================================
+// 7. CONTACT CARDS CLICK HANDLERS
 // ===================================
 function initContactCards() {
     // Email Card
