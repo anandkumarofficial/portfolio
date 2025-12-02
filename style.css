@@ -1,6 +1,6 @@
 /* ============================================
    ANAND KUMAR - PROFESSIONAL PORTFOLIO CSS
-   FULLY MOBILE RESPONSIVE
+   FULLY MOBILE RESPONSIVE ✅
    ============================================ */
 
 * {
@@ -1027,6 +1027,16 @@ body {
         font-size: 1rem;
     }
     
+    .download-resume-btn {
+        margin-top: 1.5rem;
+        padding: 0.9rem 2rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-icon {
+        font-size: 1.1rem;
+    }
+    
     .profile-wrapper {
         width: 160px;
         height: 160px;
@@ -1376,4 +1386,3 @@ body {
         transition-duration: 0.01ms !important;
     }
 }
-
