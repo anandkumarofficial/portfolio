@@ -1,4 +1,4 @@
-/* ============================================
+/* ============================================/* ============================================
    ANAND KUMAR - PROFESSIONAL PORTFOLIO CSS
    FULLY MOBILE RESPONSIVE ✅
    ============================================ */
@@ -259,6 +259,41 @@ body {
     font-size: 0.9rem;
     font-weight: 500;
     color: var(--primary);
+}
+
+/* Download Resume Button */
+.download-resume-btn {
+    margin-top: 2rem;
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    letter-spacing: 0.3px;
+    align-self: center;
+}
+
+.download-resume-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.download-resume-btn:active {
+    transform: translateY(-1px);
+}
+
+.btn-icon {
+    font-size: 1.3rem;
 }
 
 /* Section */
