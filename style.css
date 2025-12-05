@@ -1,4 +1,4 @@
-/* ============================================/* ============================================
+/* ============================================
    ANAND KUMAR - PROFESSIONAL PORTFOLIO CSS
    FULLY MOBILE RESPONSIVE ✅
    ============================================ */
@@ -432,15 +432,15 @@ body {
 /* Skills */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     max-width: 100%;
 }
 
 .skill-card {
     background: var(--gradient-primary);
     color: white;
-    padding: 1.5rem 1.2rem;
+    padding: 1.8rem 1.5rem;
     border-radius: 15px;
     text-align: center;
     transition: all 0.3s;
@@ -1133,7 +1133,7 @@ body {
     }
     
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
     
