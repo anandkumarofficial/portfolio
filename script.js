@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initParticles();
     initAccordion();
     initDownloadResume();
+    initCertificateCarousel();
     initContactCards();
     initProjectImages();
     initContactForm();
@@ -218,7 +219,147 @@ function initDownloadResume() {
 }
 
 // ===================================
-// 7. CONTACT CARDS CLICK HANDLERS
+// 7. CERTIFICATE CAROUSEL WITH AUTO-PLAY
+// ===================================
+function initCertificateCarousel() {
+    const track = document.getElementById('carouselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dots = document.querySelectorAll('.dot');
+    const certificateCards = document.querySelectorAll('.certificate-card');
+    
+    if (!track || !prevBtn || !nextBtn) return;
+    
+    let currentIndex = 0;
+    const totalSlides = certificateCards.length;
+    let autoPlayInterval;
+    
+    // Update carousel position
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        track.style.transform = `translateX(${offset}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentIndex);
+        });
+    }
+    
+    // Next slide
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+    }
+    
+    // Previous slide
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    }
+    
+    // Auto-play functionality (every 2 seconds)
+    function startAutoPlay() {
+        autoPlayInterval = setInterval(nextSlide, 2000);
+    }
+    
+    function stopAutoPlay() {
+        clearInterval(autoPlayInterval);
+    }
+    
+    // Manual controls
+    nextBtn.addEventListener('click', () => {
+        stopAutoPlay();
+        nextSlide();
+        startAutoPlay();
+    });
+    
+    prevBtn.addEventListener('click', () => {
+        stopAutoPlay();
+        prevSlide();
+        startAutoPlay();
+    });
+    
+    // Dot navigation
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            stopAutoPlay();
+            currentIndex = parseInt(dot.dataset.index);
+            updateCarousel();
+            startAutoPlay();
+        });
+    });
+    
+    // Certificate zoom modal
+    const certificateImages = document.querySelectorAll('.certificate-img');
+    const zoomButtons = document.querySelectorAll('.zoom-certificate-btn');
+    
+    // Create modal
+    const modal = document.createElement('div');
+    modal.className = 'certificate-modal';
+    modal.innerHTML = `
+        <div class="certificate-modal-close">❌</div>
+        <img class="certificate-modal-content" src="" alt="Certificate">
+    `;
+    document.body.appendChild(modal);
+    
+    const modalImg = modal.querySelector('.certificate-modal-content');
+    const closeBtn = modal.querySelector('.certificate-modal-close');
+    
+    // Open modal on image click
+    certificateImages.forEach(img => {
+        img.addEventListener('click', () => {
+            stopAutoPlay();
+            modal.style.display = 'flex';
+            modalImg.src = img.src;
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Open modal on button click
+    zoomButtons.forEach((btn, index) => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            stopAutoPlay();
+            modal.style.display = 'flex';
+            modalImg.src = certificateImages[index].src;
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        startAutoPlay();
+    }
+    
+    closeBtn.addEventListener('click', closeModal);
+    
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+    
+    // Pause auto-play on hover
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoPlay);
+        carouselContainer.addEventListener('mouseleave', startAutoPlay);
+    }
+    
+    // Start auto-play
+    startAutoPlay();
+}
+
+// ===================================
+// 8. CONTACT CARDS CLICK HANDLERS
 // ===================================
 function initContactCards() {
     // Email Card
