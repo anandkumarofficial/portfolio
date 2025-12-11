@@ -219,7 +219,7 @@ function initDownloadResume() {
 }
 
 // ===================================
-// 7. CERTIFICATE CAROUSEL WITH AUTO-PLAY
+// 7. CERTIFICATE CAROUSEL (MANUAL ONLY)
 // ===================================
 function initCertificateCarousel() {
     const track = document.getElementById('carouselTrack');
@@ -232,7 +232,6 @@ function initCertificateCarousel() {
     
     let currentIndex = 0;
     const totalSlides = certificateCards.length;
-    let autoPlayInterval;
     
     // Update carousel position
     function updateCarousel() {
@@ -257,35 +256,15 @@ function initCertificateCarousel() {
         updateCarousel();
     }
     
-    // Auto-play functionality (every 2 seconds)
-    function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 2000);
-    }
-    
-    function stopAutoPlay() {
-        clearInterval(autoPlayInterval);
-    }
-    
     // Manual controls
-    nextBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        nextSlide();
-        startAutoPlay();
-    });
-    
-    prevBtn.addEventListener('click', () => {
-        stopAutoPlay();
-        prevSlide();
-        startAutoPlay();
-    });
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
     
     // Dot navigation
     dots.forEach(dot => {
         dot.addEventListener('click', () => {
-            stopAutoPlay();
             currentIndex = parseInt(dot.dataset.index);
             updateCarousel();
-            startAutoPlay();
         });
     });
     
@@ -308,7 +287,6 @@ function initCertificateCarousel() {
     // Open modal on image click
     certificateImages.forEach(img => {
         img.addEventListener('click', () => {
-            stopAutoPlay();
             modal.style.display = 'flex';
             modalImg.src = img.src;
             document.body.style.overflow = 'hidden';
@@ -319,7 +297,6 @@ function initCertificateCarousel() {
     zoomButtons.forEach((btn, index) => {
         btn.addEventListener('click', (e) => {
             e.stopPropagation();
-            stopAutoPlay();
             modal.style.display = 'flex';
             modalImg.src = certificateImages[index].src;
             document.body.style.overflow = 'hidden';
@@ -330,7 +307,6 @@ function initCertificateCarousel() {
     function closeModal() {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
-        startAutoPlay();
     }
     
     closeBtn.addEventListener('click', closeModal);
@@ -346,16 +322,6 @@ function initCertificateCarousel() {
             closeModal();
         }
     });
-    
-    // Pause auto-play on hover
-    const carouselContainer = document.querySelector('.carousel-container');
-    if (carouselContainer) {
-        carouselContainer.addEventListener('mouseenter', stopAutoPlay);
-        carouselContainer.addEventListener('mouseleave', startAutoPlay);
-    }
-    
-    // Start auto-play
-    startAutoPlay();
 }
 
 // ===================================
