@@ -10,21 +10,24 @@
 }
 
 :root {
-    --primary: #2c3e50;
-    --secondary: #34495e;
-    --accent: #e74c3c;
-    --blue: #3498db;
-    --purple: #9b59b6;
-    --green: #27ae60;
-    --dark: #1a1a1a;
-    --gray: #7f8c8d;
-    --white: #ffffff;
+    --primary: #e0e0e0;
+    --secondary: #b0b0b0;
+    --accent: #ff6b6b;
+    --blue: #64b5f6;
+    --purple: #ba68c8;
+    --green: #4caf50;
+    --dark: #ffffff;
+    --gray: #b0b0b0;
+    --white: #1a1a1a;
+    --bg-dark: #0a0a0a;
+    --bg-card: #1a1a1a;
+    --bg-section: rgba(26, 26, 26, 0.95);
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
     --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.2);
+    --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.8);
 }
 
 html {
@@ -36,7 +39,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.7;
     color: var(--dark);
-    background: var(--gradient-primary);
+    background: #0a0a0a;
     overflow-x: hidden;
 }
 
@@ -55,7 +58,7 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
     background-size: 400% 400%;
     animation: gradientFlow 20s ease infinite;
 }
@@ -79,9 +82,10 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(26, 26, 26, 0.95);
     backdrop-filter: blur(20px);
     box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .nav-container {
@@ -97,7 +101,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary);
+    color: #ffffff;
 }
 
 .nav-links {
@@ -109,7 +113,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.95rem;
     font-weight: 600;
-    color: var(--primary);
+    color: #e0e0e0;
     text-decoration: none;
     position: relative;
 }
@@ -142,7 +146,7 @@ body {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background: var(--primary);
+    background: #ffffff;
     border-radius: 3px;
 }
 
@@ -162,7 +166,7 @@ body {
 }
 
 .hero-content {
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(26, 26, 26, 0.95);
     border-radius: 30px;
     padding: 3rem;
     box-shadow: var(--shadow-lg);
@@ -171,6 +175,7 @@ body {
     gap: 3rem;
     align-items: center;
     width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .profile-wrapper {
@@ -198,7 +203,7 @@ body {
     height: 100%;
     border-radius: 50%;
     overflow: hidden;
-    border: 8px solid white;
+    border: 8px solid rgba(26, 26, 26, 0.8);
     box-shadow: var(--shadow-md);
 }
 
@@ -212,7 +217,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--primary);
+    color: #ffffff;
     margin-bottom: 1rem;
     line-height: 1.2;
 }
@@ -224,7 +229,7 @@ body {
 .hero-subtitle {
     font-size: 1.3rem;
     font-weight: 500;
-    color: var(--gray);
+    color: #b0b0b0;
     margin-bottom: 2rem;
 }
 
@@ -238,13 +243,14 @@ body {
     display: flex;
     gap: 0.7rem;
     padding: 1rem;
-    background: rgba(102, 126, 234, 0.05);
+    background: rgba(102, 126, 234, 0.15);
     border-radius: 12px;
     transition: all 0.3s;
+    border: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 .hero-point:hover {
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(102, 126, 234, 0.25);
     transform: translateX(5px);
 }
 
@@ -258,7 +264,7 @@ body {
 .hero-point p {
     font-size: 0.9rem;
     font-weight: 500;
-    color: var(--primary);
+    color: #e0e0e0;
 }
 
 /* Download Resume Button */
@@ -298,11 +304,12 @@ body {
 
 /* Section */
 .section {
-    background: rgba(255, 255, 255, 0.98);
+    background: rgba(26, 26, 26, 0.95);
     border-radius: 30px;
     padding: 3rem;
     margin: 2rem 0;
     box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .section-header {
@@ -314,7 +321,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
     font-weight: 800;
-    color: var(--primary);
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
@@ -345,10 +352,11 @@ body {
 .timeline-item {
     position: relative;
     margin-bottom: 1.5rem;
-    background: rgba(102, 126, 234, 0.05);
+    background: rgba(102, 126, 234, 0.1);
     border-radius: 20px;
     transition: all 0.3s;
     overflow: hidden;
+    border: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 .timeline-item:hover {
@@ -363,8 +371,8 @@ body {
     height: 18px;
     background: var(--accent);
     border-radius: 50%;
-    border: 4px solid white;
-    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.2);
+    border: 4px solid #1a1a1a;
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.3);
     transition: all 0.3s;
 }
 
@@ -384,18 +392,18 @@ body {
 }
 
 .timeline-header:hover {
-    background: rgba(102, 126, 234, 0.08);
+    background: rgba(102, 126, 234, 0.15);
 }
 
 .timeline-item.active .timeline-header {
-    background: rgba(102, 126, 234, 0.1);
+    background: rgba(102, 126, 234, 0.2);
 }
 
 .timeline-content h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
     font-weight: 700;
-    color: var(--primary);
+    color: #ffffff;
     margin: 0;
 }
 
@@ -424,7 +432,7 @@ body {
 
 .timeline-content p {
     font-size: 1rem;
-    color: var(--gray);
+    color: #b0b0b0;
     line-height: 1.8;
     margin-bottom: 1rem;
 }
@@ -500,7 +508,7 @@ body {
 .certificate-card {
     min-width: 100%;
     position: relative;
-    background: white;
+    background: #2a2a2a;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -534,7 +542,7 @@ body {
 
 .zoom-certificate-btn {
     background: white;
-    color: var(--primary);
+    color: #1a1a1a;
     border: none;
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -838,11 +846,12 @@ body {
 }
 
 .project-card {
-    background: white;
+    background: #1a1a1a;
     border-radius: 25px;
     overflow: hidden;
     box-shadow: var(--shadow-sm);
     transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-card:hover {
@@ -854,7 +863,7 @@ body {
     width: 100%;
     height: 250px;
     overflow: hidden;
-    background: #f5f7fa;
+    background: #2a2a2a;
     position: relative;
 }
 
@@ -887,7 +896,7 @@ body {
 
 .view-btn {
     background: white;
-    color: var(--primary);
+    color: #1a1a1a;
     border: none;
     padding: 0.8rem 2rem;
     border-radius: 50px;
@@ -903,13 +912,13 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--primary);
+    color: #ffffff;
     margin-bottom: 1rem;
 }
 
 .project-content p {
     font-size: 0.9rem;
-    color: var(--gray);
+    color: #b0b0b0;
     line-height: 1.7;
     margin-bottom: 1.5rem;
 }
@@ -987,7 +996,7 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
     font-weight: 700;
-    color: var(--primary);
+    color: #ffffff;
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -995,16 +1004,17 @@ body {
 .form-description {
     text-align: center;
     font-size: 1rem;
-    color: var(--gray);
+    color: #b0b0b0;
     margin-bottom: 2rem;
 }
 
 .contact-form {
     max-width: 700px;
     margin: 0 auto;
-    background: rgba(102, 126, 234, 0.05);
+    background: rgba(102, 126, 234, 0.1);
     padding: 2.5rem;
     border-radius: 25px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 .form-row {
@@ -1022,18 +1032,20 @@ body {
 .form-group textarea {
     width: 100%;
     padding: 1rem;
-    border: 2px solid rgba(102, 126, 234, 0.2);
+    border: 2px solid rgba(102, 126, 234, 0.3);
     border-radius: 15px;
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
     transition: all 0.3s;
+    background: #2a2a2a;
+    color: #ffffff;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
     border-color: var(--accent);
-    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.1);
+    box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.2);
 }
 
 .form-group textarea {
@@ -1061,17 +1073,18 @@ body {
 
 /* Footer */
 .footer {
-    background: rgba(255, 255, 255, 0.95);
-    color: var(--primary);
+    background: rgba(26, 26, 26, 0.95);
+    color: #ffffff;
     text-align: center;
     padding: 2.5rem 2rem;
     margin-top: 3rem;
     border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer p {
     font-size: 0.9rem;
-    color: var(--gray);
+    color: #b0b0b0;
     margin: 0.5rem 0;
 }
 
