@@ -1134,13 +1134,14 @@ body {
         top: 70px;
         right: -100%;
         flex-direction: column;
-        background: white;
+        background: rgba(26, 26, 26, 0.98);
         padding: 2rem;
         border-radius: 20px;
         box-shadow: var(--shadow-lg);
         transition: right 0.3s ease;
         gap: 1.5rem;
         min-width: 200px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .nav-links.active {
