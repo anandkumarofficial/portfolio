@@ -197,7 +197,7 @@ function initDownloadResume() {
             // Create download link
             const link = document.createElement('a');
             link.href = 'Anand_Kumar_Diploma_EE(IC)_Resume.pdf'; // Your PDF file path
-            link.download = 'Anand Kumar Resume.pdf';
+            link.download = 'Anand_Kumar_Diploma_EE(IC)_Resume.pdf';
             
             // Trigger download
             document.body.appendChild(link);
@@ -649,4 +649,5 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
 // ===================================
 // END OF SCRIPT
 // ===================================
+
 
